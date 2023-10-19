@@ -15,7 +15,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: titleMemo.tex
-          working_directory: ./src/metarial
+          working_directory: ./src/material
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
