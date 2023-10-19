@@ -18,16 +18,11 @@ A LaTeX template based on the Thesis Regulation provided by the BNU-HKBU UIC Gra
 3. [DIR] `material`: The only file in this folder is `titleMemo.tex`, you may need to submit the title to the Graduate School before you start your thesis writing. By compiling this `tex` file, it can provide you a beatiful letter that you can directly send it to the GS.
 
 4. [DIR] `others`: This folder includes `bibliography.bib`, `cv.tex`, `pub.tex`
+    * The default bibliography style is `plain`, you can change it if you want.
 
-5. [FILE] `fypref.bib`: BibTeX-File which stored all your cited materials. For more about BibTeX file Format please check [BibTeX Format Description](http://www.bibtex.org/Format/) from bibtex.org.
+5. [FILE] `thesistemplate.tex`: All Included Packages, settings. Create this separate file for project tidiness. Sure you will need to add extra packages sometime in the future, please remember the order of the package in this file matters. It also includes the font size, linespace, logo, and etc.. Please don't change the predefined commands or variables unless you need what you are doing.
 
-    > The default bibliography style is `plain`, you can change it if you want.
-
-    > BibTeX: This software together with LaTeX can help you easily cite and create a bibliography list.
-
-6. [FILE] `thesistemplate.tex`: All Included Packages, settings. Create this separate file for project tidiness. Sure you will need to add extra packages sometime in the future, please remember the order of the package in this file matters. It also includes the font size, linespace, logo, and etc.. Please don't change the predefined commands or variables unless you need what you are doing.
-
-7. [FILE] **`thesis.tex`**: The most important file, defining the author's name, supervisor's name, the degree, date, and etc. 
+6. [FILE] **`thesis.tex`**: The most important file, defining the author's name, supervisor's name, the degree, date, and etc. 
 
 ## Acknowledgements
 
