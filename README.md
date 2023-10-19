@@ -1,7 +1,6 @@
 # UIC Research Thesis Template
 
-Un-official Version of BNU-HKBU United International College Postgraduate(Research) Thesis Template: 
-
+Unofficial Version of BNU-HKBU United International College Postgraduate(Research) Thesis Template: 
 
 ## LaTeX Template
 
