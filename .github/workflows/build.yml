@@ -2,13 +2,14 @@ name: Build LaTeX document
 on: [push]
 jobs:
   build_thesis:
+    env:
+      working-directory: ./src
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
-        working-directory: ./src
         with:
           root_file: thesis.tex
       - name: Upload PDF
