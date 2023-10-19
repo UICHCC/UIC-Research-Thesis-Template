@@ -1,0 +1,57 @@
+\section{Background}
+
+\lipsum[1-3]
+
+\section{Problem Formulation} \label{sec3:problem}
+
+\lipsum[1-3]
+
+\section{Model Description}
+
+\lipsum[1-3]
+
+\subsection{Input Representation}
+
+\begin{algorithm}
+	\caption{Sentence Grouping via Locality-Sensitive Hashing (LSH)}
+	\label{alg3:lsh}
+	\begin{algorithmic}[1]
+		\REQUIRE shingle size $n$, similarity threshold $t$, minimum group size $g$
+		\ENSURE explanation set $\mathcal{E}$, groups of sentences $\mathcal{M}$
+		\STATE Pre-process textual data to obtain the sentence collection $\mathcal{S}$
+		\STATE $lsh \gets MinHashLSH(t)$, $\mathcal{C} \gets \varnothing$
+		\FOR{sentence $s$ in $\mathcal{S}$}
+		\STATE $m \gets MinHash()$  // create MinHash for $s$
+		\FOR{$n$-shingle $h$ in $s$}
+		\STATE $m.update(h)$  // convert $s$ into $m$ by encoding its $n$-shingles
+		\ENDFOR
+		\STATE $lsh.insert(m)$, $\mathcal{C}.add(m)$  // $\mathcal{C}$: set of all sentences' MinHash
+		\ENDFOR
+		\STATE $\mathcal{M} \gets \varnothing$, $\mathcal{Q} \gets \varnothing$  // $\mathcal{Q}$: set of queried sentences
+		\FOR{$m$ in $\mathcal{C}$}
+		\IF{$m$ not in $\mathcal{Q}$}
+		\STATE $\mathcal{G} \gets lsh.query(m)$  // $\mathcal{G}$: ID set of duplicate sentences
+		\IF{$\mathcal{G}.size > g$}
+		\STATE $\mathcal{M}.add(\mathcal{G})$  // only keep groups with enough sentences
+		\STATE $\mathcal{E}.add(\mathcal{G}.get())$  // keep one explanation in each group
+		\ENDIF
+		\FOR{$m'$ in $\mathcal{G}$}
+		\STATE $lsh.remove(m')$, $\mathcal{Q}.add(m')$  // for efficiency
+		\ENDFOR
+		\ENDIF
+		\ENDFOR
+	\end{algorithmic}
+\end{algorithm}
+
+
+\section{Experimental Setup}
+
+
+
+
+
+\section{Results and Analysis}
+
+
+
+\section{Summary}

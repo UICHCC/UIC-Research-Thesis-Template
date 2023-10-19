@@ -1,0 +1,97 @@
+\documentclass[12pt,twoside]{report}
+\input{thesistemplate}
+\usepackage{lipsum}
+\usepackage[nohyperlinks]{acronym}
+\usepackage[acronym]{glossaries}
+\usepackage[hidelinks]{hyperref}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\begin{document}
+
+\pagestyle{plain}
+\author{John Smith}
+\supervisor{Prof. forename SURNAME}
+
+\title{Document of BNU-HKBU United International College Thesis (Research) Template}
+\degree{\bf Doctor of Philosophy} % Change your degree here 
+\date{\bf September 2023}
+\Thesistitle 
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Declaration}
+\input{main/declaration}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bf Abstract}
+\input{main/abstract}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bf Acknowledgments}
+\input{main/acknowledge}
+
+\newpage % Use this part to insert the table of contents
+\phantomsection
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+
+\newpage % Use this part to insert the list of table.
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\newpage % Use this part to insert the list of figure.
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\newpage % Use this part to insert the list of algorithm.
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\listofalgorithms
+\addtocontents{loa}{\def\string\figurename{Algorithm}}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Symbols and Acronyms}
+\input{main/symbols}
+
+\thesis % This command is used to set the page number.
+\newpage
+
+
+\chapter{Introduction} \label{ch:intro}
+\input{main/chapter1}
+
+\chapter{Literature Survey} \label{ch:survey}
+\input{main/chapter2}
+
+\chapter{Natural Language Explanation Generation} \label{ch:peter}
+\input{main/chapter3}
+
+\chapter{Conclusion and Future Work} \label{ch:conclude}
+\input{main/chapter4}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\bibliography{others/bibliography}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Publications}
+\input{others/pub}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{CURRICULUM VITAE}
+\input{others/cv}
+
+\end{document}
