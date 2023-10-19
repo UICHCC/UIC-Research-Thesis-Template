@@ -6,13 +6,20 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
-      - name: Compile LaTeX document
+      - name: Compile Thesis
         uses: xu-cheng/latex-action@v3
         with:
           root_file: thesis.tex
           working_directory: ./src
+      - name: Compile Memo
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: titleMemo.tex
+          working_directory: ./src/metarial
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
-          name: pdf
-          path: ./src/thesis.pdf
+          name: thesis_and_memo
+          path: |
+            ./src/thesis.pdf
+            ./src/material/titleMemo.pdf
