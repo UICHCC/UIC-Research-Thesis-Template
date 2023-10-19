@@ -15,4 +15,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: pdf
-          path: thesis.pdf
+          path: ./src/thesis.pdf
