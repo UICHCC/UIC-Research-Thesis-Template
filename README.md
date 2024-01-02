@@ -23,6 +23,8 @@ A LaTeX template based on the Thesis Regulation provided by the BNU-HKBU UIC Gra
 
 6. [FILE] **`thesis.tex`**: The most important file, defining the author's name, supervisor's name, the degree, date, and etc. 
 
+7. [FILE] **`material/titleMemo.tex`**: Before the oral defence, the student needs to submit the title to the graduate school, thus, a memo is required for the submission of the thesis title. In the file, you may need to change the values of `\studentInfo`, including: NAME, ID, DEGREE, Study Length, DEPARTMENT, TITLE, ADVISOR.
+
 ## Acknowledgements
 
 * Dr.Li, [HKBU Thesis](https://github.com/lileipisces/HKBUthesis)
